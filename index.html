@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Onboarding Hackathon Challenge</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/css/app.css">
+</head>
+
+<body>
+    <svg xmlns="https://www.w3.org/2000/svg" style="display:none">
+        <defs>
+            <symbol id="logo-main" viewBox="0 0 32 32">
+                <g id="Shopify.com svg">
+                    <g id="Group">
+                        <g id="Group_2">
+                            <path id="Vector"
+                                d="M21.2105 3.80402C21.2105 3.80402 20.8505 3.90683 20.259 4.08675C20.1561 3.75261 20.0018 3.36707 19.7961 2.95583C19.1274 1.67069 18.1245 0.976712 16.9415 0.976712C16.8644 0.976712 16.7872 0.976712 16.6843 1.00241C16.6586 0.951009 16.6072 0.925306 16.5815 0.8739C16.0671 0.308439 15.3985 0.0514104 14.6013 0.0771132C13.0583 0.128519 11.5152 1.23374 10.2808 3.21286C9.40646 4.60081 8.73782 6.3486 8.55781 7.71085C6.78334 8.25061 5.54893 8.63615 5.52321 8.66185C4.62312 8.94458 4.59741 8.97029 4.49454 9.81848C4.34024 10.461 2 28.5815 2 28.5815L21.442 31.9486V3.75262C21.3391 3.77832 21.2619 3.77832 21.2105 3.80402ZM16.7101 5.19197C15.6814 5.50041 14.5498 5.86025 13.444 6.19438C13.7526 4.98635 14.3698 3.77832 15.0899 2.98153C15.3728 2.6988 15.7585 2.36466 16.1957 2.15904C16.6329 3.08434 16.7358 4.34378 16.7101 5.19197ZM14.627 1.10523C14.987 1.10523 15.2956 1.18233 15.5528 1.33655C15.1413 1.54217 14.7299 1.87631 14.3441 2.26185C13.3669 3.31567 12.6211 4.96065 12.3125 6.52852C11.3867 6.81125 10.4609 7.09398 9.6122 7.35101C10.1523 4.90924 12.2353 1.18233 14.627 1.10523ZM11.6181 15.2418C11.721 16.8868 16.0671 17.2466 16.3243 21.1277C16.5043 24.1863 14.7041 26.2683 12.1067 26.4225C8.96928 26.6281 7.24625 24.7775 7.24625 24.7775L7.91488 21.9502C7.91488 21.9502 9.63792 23.261 11.0266 23.1582C11.9267 23.1068 12.261 22.3615 12.2353 21.8474C12.1067 19.6884 8.55781 19.8169 8.32635 16.2699C8.12062 13.3141 10.0751 10.3068 14.3955 10.0241C16.0671 9.92129 16.9158 10.3325 16.9158 10.3325L15.9386 14.0337C15.9386 14.0337 14.8327 13.5197 13.5212 13.6225C11.6181 13.751 11.5924 14.959 11.6181 15.2418ZM17.7387 4.88354C17.7387 4.11245 17.6359 3.00723 17.2758 2.08193C18.4588 2.31326 19.0246 3.6241 19.2817 4.42089C18.8188 4.5494 18.3045 4.70362 17.7387 4.88354Z"
+                                fill="white" />
+                            <path id="Vector_2"
+                                d="M22.085 31.8458L30.1601 29.841C30.1601 29.841 26.6883 6.3743 26.6626 6.22009C26.6369 6.06587 26.5083 5.96306 26.3797 5.96306C26.2511 5.96306 23.988 5.91165 23.988 5.91165C23.988 5.91165 22.5993 4.57511 22.085 4.06105V31.8458Z"
+                                fill="white" />
+                        </g>
+                    </g>
+                </g>
+            </symbol>
+            <symbol id="logo-base" viewBox="0 0 105 30">
+                <g fill="#fff">
+                    <path
+                        d="m36.2171 16.6517c-.8931-.4953-1.3631-.8962-1.3631-1.4622 0-.7311.6345-1.1792 1.6452-1.1792 1.1751 0 2.2092.4953 2.2092.4953l.8226-2.5235s-.7521-.5896-2.9848-.5896c-3.1024 0-5.2646 1.7924-5.2646 4.2922 0 1.4151 1.0106 2.4999 2.3502 3.2782 1.0812.6132 1.4572 1.0612 1.4572 1.698 0 .6839-.5406 1.2264-1.5512 1.2264-1.5041 0-2.9143-.7783-2.9143-.7783l-.8696 2.5235s1.3162.8725 3.5019.8725c3.1963 0 5.4761-1.5801 5.4761-4.4101.047-1.5565-1.1281-2.6414-2.5148-3.4432z" />
+                    <path
+                        d="m48.9559 11.3453c-1.5747 0-2.7968.7547-3.7604 1.8867l-.047-.0236 1.3631-7.1694h-3.5723l-3.4549 18.2302h3.5489l1.1751-6.2261c.47-2.3584 1.6687-3.797 2.7968-3.797.7991 0 1.1046.5425 1.1046 1.3207 0 .4953-.047 1.0849-.1645 1.5801l-1.3396 7.1459h3.5489l1.3866-7.3581c.1645-.7783.2585-1.6981.2585-2.3348.047-2.0518-.9871-3.2546-2.8438-3.2546z" />
+                    <path
+                        d="m59.884 11.3453c-4.2775 0-7.1213 3.8678-7.1213 8.1836 0 2.7593 1.6922 4.9997 4.8885 4.9997 4.207 0 7.0273-3.7734 7.0273-8.1835.0235-2.5706-1.4571-4.9998-4.7945-4.9998zm-1.7392 10.424c-1.2221 0-1.7157-1.0377-1.7157-2.3348 0-2.0517 1.0576-5.377 2.9848-5.377 1.2692 0 1.6687 1.0848 1.6687 2.1461 0 2.2168-1.0576 5.5657-2.9378 5.5657z" />
+                    <path
+                        d="m73.798 11.3453c-2.3972 0-3.7604 2.1226-3.7604 2.1226h-.047l.2115-1.9103h-3.1493c-.1645 1.2971-.4466 3.2545-.7286 4.7403l-2.4678 13.0182h3.5489l.9871-5.2827h.0706s.7285.4716 2.0917.4716c4.1834 0 6.9097-4.2922 6.9097-8.6316 0-2.3819-1.0576-4.5281-3.6664-4.5281zm-3.3843 10.4948c-.9166 0-1.4572-.5189-1.4572-.5189l.5876-3.3253c.423-2.2168 1.5746-3.7026 2.7968-3.7026 1.0811 0 1.4101 1.0141 1.4101 1.9574 0 2.2877-1.3631 5.5894-3.3373 5.5894z" />
+                    <path
+                        d="m82.5408 6.22766c-1.1281 0-2.0447.89618-2.0447 2.07537 0 1.06126.6581 1.79237 1.6687 1.79237h.047c1.1046 0 2.0682-.75469 2.0917-2.07538.0235-1.06126-.6816-1.79236-1.7627-1.79236z" />
+                    <path d="m77.5586 24.2692h3.5724l2.4208-12.6408h-3.5959z" />
+                    <path
+                        d="m92.5759 11.6047h-2.4678l.1176-.5895c.2115-1.22639.9166-2.31124 2.1152-2.31124.6346 0 1.1281.18867 1.1281.18867l.7051-2.78288s-.6111-.30659-1.9272-.30659c-1.2692 0-2.5148.35376-3.4784 1.17919-1.2221 1.03768-1.7862 2.52345-2.0682 4.03285l-.0941.5895h-1.6451l-.5171 2.6886h1.6452l-1.8802 9.9759h3.5489l1.8802-9.9759h2.4443z" />
+                    <path
+                        d="m101.131 11.6284s-2.2323 5.6129-3.2194 8.6788h-.047c-.0705-.9906-.8696-8.6788-.8696-8.6788h-3.7369l2.1387 11.6031c.047.2595.0235.4245-.0705.5896-.4231.8019-1.1046 1.5801-1.9272 2.1461-.6581.4953-1.4102.8019-1.9977 1.0141l.9871 3.0188c.7286-.1651 2.2092-.7547 3.4784-1.9339 1.6216-1.533 3.1258-3.8677 4.6531-7.0751l4.348-9.3627z" />
+                    <path
+                        d="m17.5094 3.42124s-.329.09434-.8696.25942c-.094-.30659-.235-.66034-.423-1.03768-.6111-1.17919-1.5277-1.815945-2.6088-1.815945-.0705 0-.141 0-.235.023584-.0235-.047168-.0705-.070751-.094-.117919-.4701-.518841-1.0812-.7546779-1.8097-.73109423-1.4102.04716743-2.82034 1.06126423-3.94847 2.87721423-.79909 1.27352-1.41015 2.87721-1.57467 4.12714-1.62168.49526-2.74981.84902-2.77331.8726-.82259.25942-.84609.283-.9401 1.06127-.07051.58959-2.23275 17.19247-2.23275 17.19247l17.768 3.0895v-25.82414c-.1411 0-.2116.02358-.2586.02358zm-4.1129 1.27352c-.9401.283-1.9742.61318-2.9849.91976.2821-1.10843.8461-2.21686 1.5042-2.94796.2585-.25942.6111-.56601 1.0106-.75468.3996.84902.4936 2.00462.4701 2.78288zm-1.9272-3.726223c.329 0 .611.070753.8461.212253-.3761.18867-.7521.49526-1.1047.84901-.8931.96693-1.57464 2.47629-1.85667 3.9149-.84609.25942-1.69218.51884-2.46777.75467.51706-2.26403 2.42077-5.68367 4.58304-5.730833zm-2.72633 12.971063c.09401 1.5093 4.06593 1.8395 4.30093 5.4006.1646 2.8065-1.4806 4.7168-3.85438 4.8583-2.86732.1886-4.442-1.5094-4.442-1.5094l.61107-2.5942s1.57468 1.2028 2.84382 1.1084c.82259-.0471 1.12812-.7311 1.10462-1.2027-.11751-1.9811-3.36087-1.8631-3.5724-5.1177-.18802-2.7357 1.59818-5.49499 5.54657-5.75441 1.5277-.09433 2.3033.28301 2.3033.28301l-.8931 3.396s-1.0106-.4716-2.2092-.3773c-1.73923.1179-1.76274 1.2264-1.73923 1.5094zm5.59363-9.52784c0-.70751-.094-1.72161-.4231-2.57063 1.0812.21226 1.5982 1.41503 1.8332 2.14612-.423.11792-.8931.25942-1.4101.42451z" />
+                    <path
+                        d="m18.3086 29.1747 7.3798-1.8395s-3.1728-21.53194-3.1963-21.67344c-.0235-.14151-.1411-.23584-.2586-.23584s-2.1857-.04717-2.1857-.04717-1.2692-1.22635-1.7392-1.69802z" />
+                </g>
+            </symbol>
+            <symbol id="icon-look" viewBox="0 0 24 24">
+                <path
+                    d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+                    fill="#616161" />
+            </symbol>
+            <symbol id="icon-bell" viewBox="0 0 24 24">
+                <path
+                    d="M19 13.586V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v3.586l-1.707 1.707A.996.996 0 0 0 3 16v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L19 13.586zM19 17H5v-.586l1.707-1.707A.996.996 0 0 0 7 14v-4c0-2.757 2.243-5 5-5s5 2.243 5 5v4c0 .266.105.52.293.707L19 16.414V17zm-7 5a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22z"
+                    fill="#FFFFFF" />
+            </symbol>
+            <symbol id="icon-sort" viewBox="0 0 24 24">
+                <path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z" />
+            </symbol>
+            <symbol id="icon-mark" viewBox="0 0 24 24">
+                <path
+                    d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" />
+                <path d="M9.999 13.587 7.7 11.292l-1.412 1.416 3.713 3.705 6.706-6.706-1.414-1.414z" />
+            </symbol>
+            <symbol id="icon-shop" viewBox="0 0 24 24">
+                <path
+                    d="M19.148 2.971A2.008 2.008 0 0 0 17.434 2H6.566c-.698 0-1.355.372-1.714.971L2.143 7.485A.995.995 0 0 0 2 8a3.97 3.97 0 0 0 1 2.618V19c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8.382A3.97 3.97 0 0 0 22 8a.995.995 0 0 0-.143-.515l-2.709-4.514zm.836 5.28A2.003 2.003 0 0 1 18 10c-1.103 0-2-.897-2-2 0-.068-.025-.128-.039-.192l.02-.004L15.22 4h2.214l2.55 4.251zM10.819 4h2.361l.813 4.065C13.958 9.137 13.08 10 12 10s-1.958-.863-1.993-1.935L10.819 4zM6.566 4H8.78l-.76 3.804.02.004C8.025 7.872 8 7.932 8 8c0 1.103-.897 2-2 2a2.003 2.003 0 0 1-1.984-1.749L6.566 4zM10 19v-3h4v3h-4zm6 0v-3c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v3H5v-7.142c.321.083.652.142 1 .142a3.99 3.99 0 0 0 3-1.357c.733.832 1.807 1.357 3 1.357s2.267-.525 3-1.357A3.99 3.99 0 0 0 18 12c.348 0 .679-.059 1-.142V19h-3z" />
+            </symbol>
+            <symbol id="icon-done" viewBox="0 0 24 24">
+                <path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z" />
+            </symbol>
+            <symbol id="icon-hide" viewBox="0 0 24 24">
+                <path
+                    d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+                    fill="#FFFFFF" />
+            </symbol>
+            <symbol id="icon-angd" viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z" fill="#4A4A4A" />
+            </symbol>
+            <symbol id="icon-angu" viewBox="0 0 24 24">
+                <path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z" fill="#4A4A4A" />
+            </symbol>
+            <symbol id="icon-dash" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-dasharray="5 5" />
+            </symbol>
+            <symbol id="icon-spin" viewBox="0 0 24 24">
+                <path
+                    d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                    stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="icon-chek" viewBox="0 0 24 24">
+                <circle cx="11.9996" cy="12" r="10" fill="#1C181D" stroke="#1C181D" stroke-width="2.08333"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.8163 8.64149C17.0604 8.88557 17.0604 9.2813 16.8163 9.52538L11.3997 14.942C11.1556 15.1861 10.7599 15.1861 10.5158 14.942L7.80745 12.2337C7.56337 11.9896 7.56337 11.5939 7.80745 11.3498C8.05153 11.1057 8.44725 11.1057 8.69133 11.3498L10.9577 13.6162L15.9324 8.64149C16.1765 8.39742 16.5723 8.39742 16.8163 8.64149Z"
+                    fill="white" />
+            </symbol>
+        </defs>
+    </svg>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__wrap wrap flex">
+            <a class="header__logo" href="https://www.shopify.com" aria-label="Logo"></a>
+            <div class="header__look">
+                <form class="" action="">
+                    <div class="header__field">
+                        <label class="header__label flex" for="look">
+                            <svg width="24" height="24" aria-label="Search icon">
+                                <use href="#icon-look" />
+                            </svg>
+                        </label>
+                        <input id="look" class="header__input" type="search" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+            <div class="header__side flex">
+                <button id="alert-icon" class="header__button-sm btn--focus" aria-haspopup="true" aria-expanded="false"
+                    aria-controls="alert-card" aria-label="Toggle alert">
+                    <svg width="24" height="24" aria-label="Alert icon">
+                        <use href="#icon-bell" />
+                    </svg>
+                </button>
+                <button id="menus-icon" class="header__button-bg btn--focus flex user" aria-haspopup="true"
+                    aria-expanded="false" aria-controls="menus-card">
+                    <span class="header__button-name user">Davii collections</span>
+                    <span class="header__button-lead lead user">DC</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <section class="bunker">
+            <div class="bunker__wrap wrap">
+                <div id="alert-card" class="bunker__alert bunker--popup wrap" role="alert" aria-labelledby="alert-icon">
+                    <div class="bunker__alert-head flex">
+                        <h2 class="bunker__alert-title title-lg">
+                            Alerts
+                        </h2>
+                        <div class="flex">
+                            <button class="bunker__alert-icon" aria-label="sort alert">
+                                <svg width="24" height="24">
+                                    <use href="#icon-sort" />
+                                </svg>
+                            </button>
+                            <button class="bunker__alert-icon" aria-label="mark alert">
+                                <svg width="24" height="24">
+                                    <use href="#icon-mark" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bunker__alert-body">
+                        Alerts about your store and account will show here
+                    </div>
+                </div>
+                <div id="menus-card" class="bunker__menu bunker--popup" role="menu" aria-labelledby="menus-icon">
+                    <ul class="bunker__menu-list" role="group">
+                        <li class="bunker__menu-item bunker__menu-user flex">
+                            <div>
+                                <span class="bunker__menu-mark lead">DC</span>
+                                <span class="bunker__menu-name">
+                                    Davii Collections
+                                </span>
+                            </div>
+                            <svg width="24" height="24">
+                                <use href="#icon-done" />
+                            </svg>
+                        </li>
+                        <li class="bunker__menu-item bunker__menu-last">
+                            <a class="bunker__menu-link flex" role="menuitem" href="https://admin.shopify.com">
+                                <svg class="bunker__menu-icon" width="24" height="24">
+                                    <use href="#icon-shop" />
+                                </svg>
+                                All stores
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="bunker__menu-list bunker__menu-line" role="group">
+                        <li class="bunker__menu-item">
+                            <a class="bunker__menu-link" role="menuitem" href="https://admin.shopify.com">Help
+                                Center</a>
+                        </li>
+                        <li class="bunker__menu-item">
+                            <a class="bunker__menu-link" role="menuitem" href="https://admin.shopify.com">Changelog</a>
+                        </li>
+                        <li class="bunker__menu-item">
+                            <a class="bunker__menu-link" role="menuitem" href="https://admin.shopify.com">Community
+                                forums</a>
+                        </li>
+                        <li class="bunker__menu-item">
+                            <a class="bunker__menu-link" role="menuitem" href="https://admin.shopify.com">Hire a Shopify
+                                Partner</a>
+                        </li>
+                        <li class="bunker__menu-item bunker__menu-last">
+                            <a class="bunker__menu-link" role="menuitem" href="https://admin.shopify.com">Keyboard
+                                shortcuts</a>
+                        </li>
+                    </ul>
+                    <ul class="bunker__menu-list" role="group">
+                        <li class="bunker__menu-item">
+                            David Micheal
+                            <span class="bunker__item-mail">davidmicheal@gmail.com</span>
+                        </li>
+                        <li class="bunker__menu-item">
+                            <a class="bunker__menu-link" role="menuitem" href="https://admin.shopify.com">Manage
+                                account</a>
+                        </li>
+                        <li class="bunker__menu-item bunker__menu-last">
+                            <a class="bunker__menu-link" role="menuitem" href="https://admin.shopify.com">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="close-card" class="bunker__card bunker__trial flex" role="region" aria-labelledby="close-icon">
+                    <div class="bunker__trial-text">
+                        Extend your trial for $1/month for 3 months on select plans.
+                    </div>
+                    <div class="bunker__trial-wrap flex">
+                        <a class="bunker__trial-plan btn btn--light" href="https://www.shopify.com/pricing">Select a
+                            plan</a>
+                        <button id="close-icon" class="bunker__trial-hide btn--focus" aria-label="Close trial">
+                            <svg width="24" height="24" aria-label="Close icon">
+                                <use href="#icon-hide" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="bunker__card bunker__guide">
+                    <button id="dropd-icon" class="bunker__guide-arrow bunker--focus btn--focus flex"
+                        aria-label="Toogle setup" aria-expanded="false" aria-controls="dropd-card">
+                        <svg width="24" height="24" aria-label="Dropdown icon">
+                            <use class="arrow" href="#icon-angd" />
+                        </svg>
+                    </button>
+                    <h1 class="bunker__guide-lead title-lg">
+                        Setup guide
+                    </h1>
+                    <div class="bunker__guide-text">
+                        Use this personalized guide to get your store up and running.
+                    </div>
+                    <div class="bunker__guide-span">
+                        <label id="range-label" for="range-rule">
+                            <span id="range-text" class="bunker__guide-count">0 / 5 completed</span>
+                        </label>
+                        <span id="range-rule" class="bunker__guide-track" role="progressbar"
+                            aria-labelledby="range-label">
+                            <span id="range-pipe" class="bunker__guide-inner" role="presentation" data-val="0"
+                                data-max="5">
+                            </span>
+                        </span>
+                    </div>
+                    <div id="dropd-card" class="bunker__guide-steps" role="tablist" aria-labelledby="dropd-icon">
+                        <div class="bunker__level flex level-card">
+                            <div class="bunker__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
+                            </div>
+                            <div>
+                                <button id="tab-1" class="bunker__level-title title-md title" role="tab" tabindex="0"
+                                    aria-expanded="true" aria-controls="panel-1">
+                                    Customize your online store
+                                </button>
+                                <div id="panel-1" class="bunker__level-panel flex show panel" role="tabpanel"
+                                    tabindex="0" aria-labelledby="tab-1">
+                                    <div>
+                                        <p class="bunker__level-learn">
+                                            Choose a theme and add your logo, colors, and images to reflect your brand.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <button class="btn btn--night">
+                                            Customize theme
+                                        </button>
+                                    </div>
+                                    <div class="bunker__level-image">
+                                        <img src="src/assets/img/illustration-1.png" alt="Customize your online store">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bunker__level flex level-card">
+                            <div class="bunker__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
+                            </div>
+                            <div>
+                                <button id="tab-2" class="bunker__level-title title-md title" tabindex="0"
+                                    aria-expanded="false" aria-controls="panel-2">
+                                    Add your first product
+                                </button>
+                                <div id="panel-2" class="bunker__level-panel flex" role="tabpanel" tabindex="0"
+                                    aria-labelledby="tab-2">
+                                    <div>
+                                        <p class="bunker__level-learn">
+                                            Write a description, add photos, and set pricing for the products you plan
+                                            to sell.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <div class="flex">
+                                            <button class="btn btn--night">
+                                                Add product
+                                            </button>
+                                            <button class="bunker__level-other">
+                                                Import product
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="bunker__level-image">
+                                        <img src="src/assets/img/illustration-2.png" alt=" Add your first product">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bunker__level flex level-card">
+                            <div class="bunker__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
+                            </div>
+                            <div>
+                                <button id="tab-3" class="bunker__level-title title-md title" aria-expanded="false"
+                                    aria-controls="panel-3">
+                                    Add a custom domain
+                                </button>
+                                <div id="panel-3" class="bunker__level-panel flex" role="tabpanel" tabindex="0"
+                                    aria-labelledby="tab-3">
+                                    <div>
+                                        <p class="bunker__level-learn">
+                                            Your current domain is 222219.myshopify.com but you can add a custom domain
+                                            to help customers find your online store.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <button class="btn btn--night">
+                                            Add domain
+                                        </button>
+                                    </div>
+                                    <div class="bunker__level-image">
+                                        <img src="src/assets/img/illustration-3.png" alt="Add a custom domain">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bunker__level flex level-card">
+                            <div class="bunker__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
+                            </div>
+                            <div>
+                                <button id="tab-4" class="bunker__level-title title-md title" aria-expanded="false"
+                                    aria-controls="panel-4">
+                                    Name your store
+                                </button>
+                                <div id="panel-4" class="bunker__level-panel flex" role="tabpanel" tabindex="0"
+                                    aria-labelledby="tab-4">
+                                    <div>
+                                        <p class="bunker__level-learn">
+                                            Your temporary store name is currently Davii collections. The store name
+                                            appears in your admin and your online store.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <button class="btn btn--night">
+                                            Name store
+                                        </button>
+                                    </div>
+                                    <div class="bunker__level-image">
+                                        <img src="src/assets/img/illustration-4.png" alt="Name your store">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bunker__level flex level-card">
+                            <div class="bunker__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
+                            </div>
+                            <div>
+                                <button id="tab-5" class="bunker__level-title title-md title" aria-expanded="false"
+                                    aria-controls="panel-5">
+                                    Set up a payment provider
+                                </button>
+                                <div id="panel-5" class="bunker__level-panel flex" role="tabpanel" tabindex="0"
+                                    aria-labelledby="tab-5">
+                                    <div>
+                                        <p class="bunker__level-learn">
+                                            Choose a payment provider to start accepting payments. You'll need to create
+                                            an account with the payment provider and set it up with your Shopify store.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <button class="btn btn--night">
+                                            Set up payment
+                                        </button>
+                                    </div>
+                                    <div class="bunker__level-image">
+                                        <img src="src/assets/img/illustration-5.png" alt="Set up a payment provider">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Script -->
+    <script src="./src/js/app.js"></script>
+</body>
+
+</html>
